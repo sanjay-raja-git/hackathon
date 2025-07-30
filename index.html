@@ -124,7 +124,7 @@
   <ul id="dropdownMenu" class="absolute top-8 left-0 w-44 bg-white text-black rounded-lg shadow-lg 
              opacity-0 scale-95 pointer-events-none 
              transform transition-all duration-300 ease-out z-20">
-    <li><a onclick="goToNextPage()" href="#tshirts" class="block px-4 py-3 hover:bg-[#f4a337]">Top-wear</a></li>
+    <li><a href="#tshirts" class="block px-4 py-3 hover:">Top-wear</a></li>
     <li><a href="#Bottom-wear" class="block px-4 py-2 hover:bg-[#f4a337]">Bottom-wear</a></li>
     <li><a href="#accessories" class="block px-4 py-2 hover:bg-[#f4a337]">Foot-wear</a></li>
     <li><a href="#tshirts" class="block px-4 py-2 hover:bg-[#f4a337]">Cosmetics</a></li>
@@ -132,11 +132,7 @@
     <li><a href="#accessories" class="block px-4 py-2 hover:bg-[#f4a337]">Accessories</a></li>
   </ul>
 </li>
- <script>
-    function goToNextPage() {
-      window.location.href = "#"; 
-    }
-  </script>
+
 
 <script>
   let isDropdownOpen = false;
@@ -172,15 +168,19 @@
     <a class="text-lg pl-1"> Cart</a>
   </li>
     
-  <li class="group flex items-center gap-1 transition-all duration-300 hover:text-[#f4a337]">
+  <li class="group flex items-center gap-1 transition-all duration-300">
     <svg class="h-5 w-5 transition-transform duration-300 group-hover:scale-110" fill="none" stroke="currentColor" viewBox="0 0 24 24">
       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.121 17.804A9.978 9.978 0 0112 15c2.485 0 4.747.912 6.879 2.414M15 10a3 3 0 11-6 0 3 3 0 016 0z"/>
     </svg>
-    <a href="" class="text-lg pl-1g">Login</a>
+    <a onclick="goToNextPage()" href ="login.html"class="text-lg pl-1g">Login</a>
   </li>
 </ul>
 
-
+ <script>
+    function goToNextPage() {
+      window.location.href = "login.html"; 
+    }
+  </script>
    
       <button onclick="toggleMenu()" class="md:hidden focus:outline-none">
         <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -914,7 +914,7 @@
   </button>
 
   <!-- Card Slider -->
-  <div id="cardSlider" class="flex overflow-x-auto space-x-6 scrollbar-hide scroll-smooth px-8 py-5">
+  <div id="cardSlider1" class="flex overflow-x-auto space-x-6 scrollbar-hide scroll-smooth px-8 py-5">
     
     <!-- Card 1 -->
     <div class="relative group min-w-[320px] bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transform hover:scale-[1.04] transition duration-300 ring-1 ring-gray-200">
@@ -1025,7 +1025,7 @@
   </div>
 </section>
 <script>
-  const cardSlider = document.getElementById('cardSlider');
+  const cardSlider = document.getElementById('cardSlider1');
   document.getElementById('scrollLeft').onclick = () => cardSlider.scrollBy({ left: -320, behavior: 'smooth' });
   document.getElementById('scrollRight').onclick = () => cardSlider.scrollBy({ left: 320, behavior: 'smooth' });
 </script>
@@ -1033,7 +1033,7 @@
 
 
 <script>
-  const slider = document.getElementById('cardSlider');
+  const slider = document.getElementById('cardSlider1');
   const scrollLeftBtn = document.getElementById('scrollLeft');
   const scrollRightBtn = document.getElementById('scrollRight');
 
@@ -1049,12 +1049,12 @@
   <h2 class="text-5xl font-bold text-center mb-10 pb-5 text-slate-800 animate-shine">WOMEN-WEAR</h2>
 
   <!-- Scroll Buttons -->
-  <button id="scrollLeft" class="absolute top-1/2 left-2 z-10 transform -translate-y-1/2 bg-white text-orange-500 hover:bg-orange-500 hover:text-white px-4 py-4 rounded-full shadow-md transition">
+  <button id="scrollLeft2" class="absolute top-1/2 left-2 z-10 transform -translate-y-1/2 bg-white text-orange-500 hover:bg-orange-500 hover:text-white px-4 py-4 rounded-full shadow-md transition">
     <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
   </svg>
   </button>
-  <button id="scrollRight" class="absolute top-1/2 right-4 z-10 transform -translate-y-1/2 bg-white text-orange-500 hover:bg-orange-500 hover:text-white px-4 py-4 rounded-full shadow-md transition">
+  <button id="scrollRight2" class="absolute top-1/2 right-4 z-10 transform -translate-y-1/2 bg-white text-orange-500 hover:bg-orange-500 hover:text-white px-4 py-4 rounded-full shadow-md transition">
       <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
   </svg>
@@ -1062,7 +1062,7 @@
   </button>
 
   <!-- Card Slider -->
-  <div id="cardSlider" class="flex overflow-x-auto space-x-6 scrollbar-hide scroll-smooth px-8 py-5">
+  <div id="cardSlider2" class="flex overflow-x-auto space-x-6 scrollbar-hide scroll-smooth px-8 py-5">
     
     <!-- Card 1 -->
     <div class="relative group min-w-[320px] bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transform hover:scale-[1.04] transition duration-300 ring-1 ring-gray-200">
@@ -1173,28 +1173,28 @@
   </div>
 </section>
 <script>
-  const slider1 = document.getElementById('cardSlider1');
-  const scrollLeftBtn1 = document.getElementById('scrollLeft1');
-  const scrollRightBtn1 = document.getElementById('scrollRight1');
+  const slider2 = document.getElementById('cardSlider2');
+  const scrollLeftBtn2 = document.getElementById('scrollLeft2');
+  const scrollRightBtn2 = document.getElementById('scrollRight2');
 
-  scrollLeftBtn1.addEventListener('click', () => {
-    slider1.scrollBy({ left: -300, behavior: 'smooth' });
+  scrollLeftBtn2.addEventListener('click', () => {
+    slider2.scrollBy({ left: -300, behavior: 'smooth' });
   });
 
-  scrollRightBtn1.addEventListener('click', () => {
-    slider1.scrollBy({ left: 300, behavior: 'smooth' });
+  scrollRightBtn2.addEventListener('click', () => {
+    slider2.scrollBy({ left: 300, behavior: 'smooth' });
   });
 </script>
 <section id="kids wear" class="bg-white py-10 px-4 relative animate-fadeSlideIn">
   <h2 class="text-5xl font-bold text-center mb-10 pb-5 text-slate-800 animate-shine">KIDS-WEAR</h2>
 
   <!-- Scroll Buttons -->
-  <button id="scrollLeft" class="absolute top-1/2 left-2 z-10 transform -translate-y-1/2 bg-white text-orange-500 hover:bg-orange-500 hover:text-white px-4 py-4 rounded-full shadow-md transition">
+  <button id="scrollLeft3" class="absolute top-1/2 left-2 z-10 transform -translate-y-1/2 bg-white text-orange-500 hover:bg-orange-500 hover:text-white px-4 py-4 rounded-full shadow-md transition">
     <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
   </svg>
   </button>
-  <button id="scrollRight" class="absolute top-1/2 right-4 z-10 transform -translate-y-1/2 bg-white text-orange-500 hover:bg-orange-500 hover:text-white px-4 py-4 rounded-full shadow-md transition">
+  <button id="scrollRight3" class="absolute top-1/2 right-4 z-10 transform -translate-y-1/2 bg-white text-orange-500 hover:bg-orange-500 hover:text-white px-4 py-4 rounded-full shadow-md transition">
       <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
   </svg>
@@ -1202,7 +1202,7 @@
   </button>
 
   <!-- Card Slider -->
-  <div id="cardSlider" class="flex overflow-x-auto space-x-6 scrollbar-hide scroll-smooth px-8 py-5">
+  <div id="cardSlider3" class="flex overflow-x-auto space-x-6 scrollbar-hide scroll-smooth px-8 py-5">
     
     <!-- Card 1 -->
     <div class="relative group min-w-[320px] bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transform hover:scale-[1.04] transition duration-300 ring-1 ring-gray-200">
@@ -1313,20 +1313,97 @@
   </div>
 </section>
 <script>
-  const slider2 = document.getElementById('cardSlider2');
-  const scrollLeftBtn2 = document.getElementById('scrollLeft2');
-  const scrollRightBtn2 = document.getElementById('scrollRight2');
+  const slider3 = document.getElementById('cardSlider3');
+  const scrollLeftBtn3 = document.getElementById('scrollLeft3');
+  const scrollRightBtn3 = document.getElementById('scrollRight3');
 
-  scrollLeftBtn2.addEventListener('click', () => {
-    slider2.scrollBy({ left: -300, behavior: 'smooth' });
+  scrollLeftBtn3.addEventListener('click', () => {
+    slider3.scrollBy({ left: -300, behavior: 'smooth' });
   });
 
-  scrollRightBtn2.addEventListener('click', () => {
-    slider2.scrollBy({ left: 300, behavior: 'smooth' });
+  scrollRightBtn3.addEventListener('click', () => {
+    slider3.scrollBy({ left: 300, behavior: 'smooth' });
   });
 </script>
 
-  
+
+  <section class="bg-white py-15 px-6">
+  <h2 class="text-5xl font-bold text-center text-slate-800 mb-10">Customer Reviews</h2>
+
+  <div class="overflow-hidden relative">
+    <!-- Moving Wrapper -->
+    <div class="flex gap-6 animate-scrollReview w-max">
+      
+      <!-- Repeatable Review Cards -->
+      <div class="bg-gray-50 pb-5 min-w-[300px] rounded-2xl shadow-md hover:shadow-lg transition duration-300">
+        <div class="flex items-center gap-4 mb-4">
+          <img src="https://i.pravatar.cc/100?img=1" alt="Customer" class="w-12 h-12 rounded-full border-2 border-orange-500">
+          <div>
+            <h4 class="font-semibold text-lg text-slate-800">Ravi Kumar</h4>
+            <div class="text-yellow-400 text-sm">⭐⭐⭐⭐⭐</div>
+          </div>
+        </div>
+        <p class="text-gray-600 leading-relaxed">
+          Absolutely love the quality! The fit is great and it’s super comfortable. Will definitely order again.
+        </p>
+      </div>
+
+      <div class="bg-gray-50 p-6 min-w-[300px] rounded-2xl shadow-md hover:shadow-lg transition duration-300">
+        <div class="flex items-center gap-4 mb-4">
+          <img src="https://i.pravatar.cc/100?img=2" alt="Customer" class="w-12 h-12 rounded-full border-2 border-orange-500">
+          <div>
+            <h4 class="font-semibold text-lg text-slate-800">Anjali Mehra</h4>
+            <div class="text-yellow-400 text-sm">⭐⭐⭐⭐☆</div>
+          </div>
+        </div>
+        <p class="text-gray-600 leading-relaxed">
+          Great fabric and stylish designs. Delivery was quick too. I’m impressed with the overall experience!
+        </p>
+      </div>
+
+      <div class="bg-gray-50 p-6 min-w-[300px] rounded-2xl shadow-md hover:shadow-lg transition duration-300">
+        <div class="flex items-center gap-4 mb-4">
+          <img src="https://i.pravatar.cc/100?img=3" alt="Customer" class="w-12 h-12 rounded-full border-2 border-orange-500">
+          <div>
+            <h4 class="font-semibold text-lg text-slate-800">Sanjay Reddy</h4>
+            <div class="text-yellow-400 text-sm">⭐⭐⭐⭐⭐</div>
+          </div>
+        </div>
+        <p class="text-gray-600 leading-relaxed">
+          This is exactly what I was looking for. Modern style, comfortable, and affordable. Great customer support too!
+        </p>
+      </div>
+
+      <!-- Duplicate cards to create seamless loop -->
+      <div class="bg-gray-50 p-6 min-w-[300px] rounded-2xl shadow-md hover:shadow-lg transition duration-300">
+        <div class="flex items-center gap-4 mb-4">
+          <img src="https://i.pravatar.cc/100?img=4" alt="Customer" class="w-12 h-12 rounded-full border-2 border-orange-500">
+          <div>
+            <h4 class="font-semibold text-lg text-slate-800">Priya Sharma</h4>
+            <div class="text-yellow-400 text-sm">⭐⭐⭐⭐⭐</div>
+          </div>
+        </div>
+        <p class="text-gray-600 leading-relaxed">
+          Stylish and very trendy! I got so many compliments. Very happy with the purchase.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Custom CSS for scroll animation -->
+<style>
+  @keyframes scrollReview {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+
+  .animate-scrollReview {
+    animation: scrollReview 25s linear infinite;
+  }
+</style>
+
   
 
 
